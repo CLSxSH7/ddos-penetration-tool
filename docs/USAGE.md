@@ -10,7 +10,7 @@
 **1. Clone the repository:**
 
 ```bash
-git clone 
+git clone git@github.com:CLSxSH7/ddos-penetration-tool.git
 cd ddos-penetration-tool
 ```
 
