@@ -14,7 +14,7 @@ The core layer contains the fundamental logic for conducting simulated DDoS atta
 
 **Components:**
 
-- `DDOSClient`: Main attack orchestration class
+- `DDoSClient`: Main attack orchestration class
 - `AttackManager` (planned): Advanced attack scheduling and management
 
 **Responsibilities:**
@@ -76,7 +76,7 @@ The configuration layer manages application settings and parameters.
 1. **User Input**: User interacts with the menu system
 2. **Validation**: Input is validated and sanitized
 3. **Configuration**: Attack parameters are set
-4. **Initialization**: DDOSClient is instantiated with parameters
+4. **Initialization**: DDoSClient is instantiated with parameters
 5. **Execution**: Attack runs in multiple threads
 6. **Monitoring**: Real-time logging of request results
 7. **Statistics**: Attack metrics are collected and reported

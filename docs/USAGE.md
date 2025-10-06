@@ -29,6 +29,22 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
+### Run with free proxy
+
+```bash
+python main.py --use-free-proxies
+```
+
+### Direct proxy mode
+
+```bash
+python main.py --use-free-proxies http://127.0.0.1:8000 50
+```
+
+### Help
+```bash
+python main.py --help
+```
 
 ## Menu Navigation
 
