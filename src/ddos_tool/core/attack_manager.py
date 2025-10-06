@@ -4,7 +4,7 @@ Attack manager for coordinating multiple DDoS clients
 
 import time
 import threading
-from ddos_tool.core.ddos_client import DDOSClient
+from ddos_tool.core.ddos_client import DDoSClient
 
 
 class AttackManager:
@@ -20,7 +20,7 @@ class AttackManager:
 
     def add_client(self, target, threads):
         """Add a new DDoS client to the attack"""
-        client = DDOSClient(target, threads)
+        client = DDoSClient(target, threads)
         self.clients.append(client)
         return len(self.clients) - 1
 

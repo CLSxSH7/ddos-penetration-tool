@@ -1,5 +1,5 @@
 """
-Unit tests for the DDOSClient class
+Unit tests for the DDoSClient class
 """
 
 import unittest
@@ -10,14 +10,14 @@ import os
 # Add src to path for relative imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from ddos_tool.core.ddos_client import DDOSClient
+from ddos_tool.core.ddos_client import DDoSClient
 
 
-class TestDDOSClient(unittest.TestCase):
+class TestDDoSClient(unittest.TestCase):
 
     def setUp(self):
         """Set up test fixtures before each test method."""
-        self.client = DDOSClient("http://example.com", 5)
+        self.client = DDoSClient("http://example.com", 5)
 
     def test_initialization(self):
         """Test client initialization"""

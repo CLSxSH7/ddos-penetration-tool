@@ -9,7 +9,7 @@ import time
 # Add src to path for relative imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from ddos_tool.core.ddos_client import DDOSClient
+from ddos_tool.core.ddos_client import DDoSClient
 import threading
 
 
@@ -18,7 +18,7 @@ def run_sample_attack():
     print("Running sample DDoS attack...")
     print("=" * 50)
 
-    client = DDOSClient("http://your-test-environment.local", 10)
+    client = DDoSClient("http://your-test-environment.local", 10)
 
     print(f"Target: {client.target}")
     print(f"Threads: {client.num_threads}")
@@ -31,7 +31,7 @@ def run_sample_attack():
 
     try:
         # Start attack (will run until interrupted)
-        client.start_attack()
+        client.attack()
     except KeyboardInterrupt:
         print("\nSample attack stopped by user")
     except Exception as e:

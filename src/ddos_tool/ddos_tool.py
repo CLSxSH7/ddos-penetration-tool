@@ -9,7 +9,7 @@ import os
 # Add src to path for relative imports
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from main.ui.menus import show_main_menu
+from ddos_tool.ui.menus import show_main_menu
 
 
 def main():

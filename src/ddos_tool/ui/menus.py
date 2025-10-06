@@ -3,7 +3,7 @@ User interface menus for the DDoS tool
 """
 
 import sys
-from ddos_tool.core.ddos_client import DDOSClient
+from ddos_tool.core.ddos_client import DDoSClient
 from ddos_tool.ui.validators import get_target, get_thread_count
 
 
@@ -29,7 +29,7 @@ def show_main_menu():
             if ddos_client is None:
                 target = get_target()
                 threads = get_thread_count()
-                ddos_client = DDOSClient(target, threads)
+                ddos_client = DDoSClient(target, threads)
 
             show_attack_menu(ddos_client)
 
@@ -61,7 +61,7 @@ def show_attack_menu(ddos_client):
 
         if attack_choice == "1":
             try:
-                ddos_client.start_attack()
+                ddos_client.attack()
             except Exception as e:
                 print(f"[!] Attack failed: {str(e)}")
 
