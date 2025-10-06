@@ -34,7 +34,7 @@ pip install -r requirements.txt
 Run the main script:
 
 ```bash
-python -m ddos_tool
+python main.py (no proxy)
 ```
 
 See detailed usage instructions in [docs/USAGE.md](docs/USAGE.md)
