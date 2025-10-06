@@ -30,7 +30,7 @@ setup(
     install_requires=requirements,
     entry_points={
         "console_scripts": [
-            "ddos-tool=ddos_tool.main:main",
+            "ddos-tool=ddos_tool.ddos_tool:main",
         ],
     },
 )
